@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -12,6 +12,7 @@ export class LabsComponent {
     title = 'to-do-list-angular';
     tasks = ['Task 1', 'Task 2', 'Task 3'];
     isDisabled = false
+    inputValue = signal('')
 
     handleClick() {
         alert('Button clicked!')
@@ -23,11 +24,15 @@ export class LabsComponent {
         console.log((event.target as HTMLInputElement).value);
     }
     handleKeyDown(event: KeyboardEvent) {
-        const input = event.target as HTMLInputElement
+        const input = event.target as HTMLInputElement;
         alert(`Keydown event!\n${input.value}`)
     }
     handleKeyDownMoreKey(event: Event) {
         const input = event.target as HTMLInputElement
         alert(`Keydown event!\n${input.value}`)
+    }
+    handleSignalInput(event: Event) {
+        const input = event.target as HTMLInputElement;
+        this.inputValue.set(input.value)
     }
 }

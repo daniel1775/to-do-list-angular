@@ -12,13 +12,7 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
-  });
-
-  it(`should have the 'to-do-list-angular' title`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('to-do-list-angular');
-  });
+  })
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);

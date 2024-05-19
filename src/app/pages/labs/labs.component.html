@@ -19,4 +19,6 @@
     <input type="text" (keydown)="handleKeyDown($event)" class="input" />
     <p>keydown + any key</p>
     <input type="text" (keyup.k)="handleKeyDownMoreKey($event)" class="input" />
+    <p>Signal input value: {{ inputValue() }}</p>
+    <input type="text" (keyup)="handleSignalInput($event)"/>
 </div>
