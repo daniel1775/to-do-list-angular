@@ -1,6 +1,22 @@
 <h1>Hello World!</h1>
-<div>
+<div class="container">
     <p *ngFor="let singleTask of tasks">
         {{ singleTask }}
     </p>
+    <button [disabled]="!isDisabled">
+        I'm a pretty button
+    </button>
+    <button (click)="handleClick()" class="button button-click">
+        click event
+    </button>
+    <button (dblclick)="handleDoubleClick()" class="button button-double-click">
+        double click event
+    </button>
+    <p>change</p>
+    <input type="text" (change)="handleInput($event)" class="input" />
+    <!-- Keydown can be use to handle specific keys or shortcuts -->
+    <p>keydown</p>
+    <input type="text" (keydown)="handleKeyDown($event)" class="input" />
+    <p>keydown + any key</p>
+    <input type="text" (keyup.k)="handleKeyDownMoreKey($event)" class="input" />
 </div>
