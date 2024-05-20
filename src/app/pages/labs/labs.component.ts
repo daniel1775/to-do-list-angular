@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
 })
 export class LabsComponent {
     title = 'to-do-list-angular';
-    tasks = ['Task 1', 'Task 2', 'Task 3'];
+    tasks = ['Task 1', 'Task 2', 'Task 3', 'Task 4'];
     isDisabled = false
     inputValue = signal('')
 
